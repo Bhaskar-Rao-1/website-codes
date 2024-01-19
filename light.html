@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function light(sw){
+                var pic;
+                if(sw==1){
+                    pic="pic_bulbon.gif"
+                }else{
+                    pic="pic_bulboff.gif"
+                }  
+                document.getElementById('myLight').src=pic;    
+            }
+        </script>
+        <img src="pic_bulboff.gif" id="myLight">
+        <button onclick="light(1)">light on</button>
+        <button onclick="light(0)">light off</button>
+    </body>
+</html>

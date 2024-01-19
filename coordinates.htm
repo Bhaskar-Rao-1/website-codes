@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML Geolocation</h1>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+    const x=document.getElementById("demo");
+    function getLocation(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(shoePosition,shoeError);
+        }else{
+            x.innerHTML="not support";
+        }
+    }
+    function shoePosition(position){
+        x.innerHTML="Latitude"+position.coords.latitude+"longitude"+position.coords.longitude;
+    }
+    function shoeError(error){
+     switch(error.code){
+        case error.PERMISSION_DENIED:
+            x.innerHTML="permissiom was denied";
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML="it is unknown";
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML="position was unavailable";
+            break;
+        case error.TIMEOUT:
+            x.innerHTML="time was not enough";
+        
+     }
+    }
+</script>
+
+</body>
+</html>
+

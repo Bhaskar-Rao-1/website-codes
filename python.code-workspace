@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "python",
+			"path": "../../../../Documents/python"
+		},
+		{
+			"name": "WEB",
+			"path": "../../../../Documents/WEB"
+		},
+		{
+			"name": "c++lan",
+			"path": "../../../../Documents/c++lan"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"INPUT.C": "cpp",
+			"stdio.h": "c"
+		},
+		"liveServer.settings.multiRootWorkspaceName": "WEB"
+	}
+}
